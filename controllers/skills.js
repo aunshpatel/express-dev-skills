@@ -24,6 +24,7 @@ function newSkill(req, res) {
 }
 function create(req, res) {
   // The model is responsible for creating data
+  console.log(req.body);
   Skill.create(req.body);
   // Do a redirect anytime data is changed
   res.redirect('/');

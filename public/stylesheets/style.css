@@ -15,7 +15,17 @@ a {
 .delete-form button {
   color: #00B7FF;
 }
-	
-/* li {
-  list-style: none;
-} */
+
+input{
+  width:234px;
+}
+
+li {
+  width: 300px;
+  margin-bottom: 15px;
+}
+span{
+  width: 300px;
+  display: inline-flex;
+  justify-content: space-between;
+}
