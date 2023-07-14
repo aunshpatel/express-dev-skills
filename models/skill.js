@@ -35,7 +35,5 @@ function update(id, updatedTodo) {
     id = parseInt(id);
     const skill = skills.find(skill => skill.id === id);
     skill.skill = updatedTodo.skill;
-    skill.level = updatedTodo.level
-    //skills.push(skill);
-    //return skills.find(skill => skill.id === id);
+    skill.level = updatedTodo.level;
 }

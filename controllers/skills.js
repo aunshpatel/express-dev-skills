@@ -28,7 +28,6 @@ function show(req, res) {
 
 function skills(req, res) {
   res.render('skills/index', {
-    //skills: Skill.getAll()
     title:'Skill Page',
     skill:Skill.getOne(req.params.id)
   });
@@ -55,9 +54,7 @@ function deleteSkill(req, res) {
 function update(req, res) {
   console.log(req.body);
   Skill.update(req.params.id, req.body);
-  //res.redirect(`/${req.params.id}`);
   res.redirect('/');
-  // res.redirect(`/skills/${req.params.id}`);
 }
 
 function edit(req, res) {

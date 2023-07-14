@@ -5,6 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'My Skill' });
 });
+
 router.get('/skills', function(req, res, next) {
   res.render('index', { title: 'Skills List' });
 });

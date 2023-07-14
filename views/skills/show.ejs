@@ -1,28 +1,8 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Skill</title>
-</head>
-<body> -->
-
 <%- include('../partials/header') %> 
-    <!-- <a href="/"><h3>Go Back</h3></a> -->
-    <!-- <h2>Welcome to Edit Skill Page</h2> -->
     <br>
     <p>
         <%= skill.skill %> - <%= skill.level %>
     </p>
     <br>
     <a href="/<%= skill.id %>/edit">Edit the skill</a>
-
-    <!-- <form action="/<%= skill.id %>/edit" method="POST" autocomplete="off">
-        <input type="text" name="skill" placeholder="Please enter your skill here" value="<%= skill.skill %>"><br><br>
-        <input type="text" name="level" placeholder="Please enter your proficiency level here" value="<%= skill.level %>"><br><br>
-        <button type="submit">Update <%= title %></button>
-    </form> -->
-
 <%- include('../partials/footer') %> 
-<!-- </body>
-</html> -->

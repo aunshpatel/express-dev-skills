@@ -8,27 +8,27 @@ var router = express.Router();
 
 var skillsCtrl = require('../controllers/skills');
 
-// All paths start with "/skills"
+// All paths start with "/"
 
-// GET /skills
+// GET "/"
 router.get('/', skillsCtrl.index);
-// GET /skills/new
+// GET "/new"
 router.get('/new', skillsCtrl.new);
-// POST /skills
+// POST /
 router.post('/', skillsCtrl.create);
 
-// GET /:id/edit skills
+// GET "/:id/ skills"
 //router.get('/:id/', todosCtrl.show);
 
 router.get('/:id', skillsCtrl.show);
 
-// GET /skills/:id
+// GET "/:id/edit"
 router.get('/:id/edit', skillsCtrl.edit);
 
-// GET /skills/:id
+// DELETE "/:id"
 router.delete('/:id', skillsCtrl.delete);
 
-//PUT /skills/:id
+//PUT "/:id"
 router.put('/:id', skillsCtrl.update);
 
 module.exports = router;
