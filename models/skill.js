@@ -1,7 +1,7 @@
 const skills = [
-    {id:1, skill: 'HTML', level:"Proficient"},
-    {id:2, skill: 'Flutter', level:"Proficient"},
-    {id:3, skill: 'Dart', level:"Proficient"},
+    {id:125223, skill: 'HTML', level:"Proficient"},
+    {id:127904, skill: 'Flutter', level:"Proficient"},
+    {id:139608, skill: 'Dart', level:"Proficient"},
 ];
 	
 function getAll() {
@@ -9,20 +9,23 @@ function getAll() {
 }
 
 function getOne(id) {
-    id = parseInt(id);
-    return skills.find(skills => skills.id === id);
+    return skills.find(skill => parseInt(skill.id) === id);
 }
 
 function create(skill) {
-    // Add the id
-    skill.id += 1;
-    // New todos wouldn't be done :)
-    //todo.done = false;
+    skill.id = Date.now() % 1000000;
     skills.push(skill);
-  };
+};
+
+function deleteOne(id) {
+    id = parseInt(id);
+    const idx = skills.findIndex(skill=>skill.id === id);
+    skills.splice(idx, 1);
+}
 
 module.exports = {
     getAll,
     getOne,
-    create
+    create,
+    deleteOne
 };

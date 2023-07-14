@@ -16,6 +16,9 @@
             <%= sk.skill %>
           </p>
         </li>
+        <form action="/<%= sk.id %>?_method=DELETE" class="delete-form" method="POST">
+          <button type="submit">X</button>
+        </form>
       <% }); %>
     </ol>
 
