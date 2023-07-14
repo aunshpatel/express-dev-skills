@@ -6,13 +6,20 @@ var router = express.Router();
 //   res.send('respond with a resource');
 // });
 
-// All paths start with "/skills"
+
 
 var skillsCtrl = require('../controllers/skills');
 
-  // All actual paths begin with "/todos"
+// All paths start with "/skills"
 
-  // GET /todos
-  router.get('/', skillsCtrl.index);
+// GET /skills
+router.get('/', skillsCtrl.index);
+// GET /skills/new
+router.get('/new', skillsCtrl.new);
+// POST /todos
+router.post('/', skillsCtrl.create);
+
+// GET /skills/:id
+router.get('/:id', skillsCtrl.show);
 
 module.exports = router;

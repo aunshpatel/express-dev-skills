@@ -1,4 +1,25 @@
-<%- include('./partials/header') %>
-    <h1><%= title %></h1>
-    <a href="/skills">To-Do List1</a>
-<%- include('./partials/footer') %>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Skills Page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h2>Welcome To My Skills Page</h2>
+    <!-- <a href="/skills">Skills List</a> -->
+    <h4>Skills List:</h4>
+    <ol>
+      <% skills.forEach(function(sk) { %>
+        <li>
+          <p id="<%= sk.id %>">
+            <%= sk.skill %>
+          </p>
+        </li>
+      <% }); %>
+    </ol>
+
+    <a href="/new">Add New Skills</a>
+
+</body>
+</html>
