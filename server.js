@@ -29,7 +29,7 @@ app.use(methodOverride('_method'));
 
 app.use('/', usersRouter);
 app.use('/new', usersRouter);
-//app.use('/skills', usersRouter);
+app.use('/skills', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -13,10 +13,12 @@
       <% skills.forEach(function(sk) { %>
         <li>
           <span>
-            <a href="<%= sk.id %>">
+            <a href="/<%= sk.id %>">
+            <!-- <span> -->
               <%= sk.skill %>
               -
               <%= sk.level %>
+            <!-- </span> -->
             </a>
             <form action="/<%= sk.id %>?_method=DELETE" class="delete-form" method="POST">
               <button type="submit">Delete</button>

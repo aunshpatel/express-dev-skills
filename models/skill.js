@@ -3,13 +3,22 @@ const skills = [
     {id:127904, skill: 'Flutter', level:"Proficient"},
     {id:139608, skill: 'Dart', level:"Proficient"},
 ];
+
+module.exports = {
+    getAll,
+    getOne,
+    create,
+    deleteOne,
+    update
+};
 	
 function getAll() {
     return skills;
 }
 
 function getOne(id) {
-    return skills.find(skill => parseInt(skill.id) === id);
+    id = parseInt(id);
+    return skills.find(skill => skill.id === id);
 }
 
 function create(skill) {
@@ -22,10 +31,11 @@ function deleteOne(id) {
     const idx = skills.findIndex(skill=>skill.id === id);
     skills.splice(idx, 1);
 }
-
-module.exports = {
-    getAll,
-    getOne,
-    create,
-    deleteOne
-};
+function update(id, updatedTodo) {
+    id = parseInt(id);
+    const skill = skills.find(skill => skill.id === id);
+    skill.skill = updatedTodo.skill;
+    skill.level = updatedTodo.level
+    //skills.push(skill);
+    //return skills.find(skill => skill.id === id);
+}

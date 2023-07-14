@@ -6,8 +6,6 @@ var router = express.Router();
 //   res.send('respond with a resource');
 // });
 
-
-
 var skillsCtrl = require('../controllers/skills');
 
 // All paths start with "/skills"
@@ -16,12 +14,21 @@ var skillsCtrl = require('../controllers/skills');
 router.get('/', skillsCtrl.index);
 // GET /skills/new
 router.get('/new', skillsCtrl.new);
-// POST /todos
+// POST /skills
 router.post('/', skillsCtrl.create);
 
-// GET /skills/:id
+// GET /:id/edit skills
+//router.get('/:id/', todosCtrl.show);
+
 router.get('/:id', skillsCtrl.show);
+
+// GET /skills/:id
+router.get('/:id/edit', skillsCtrl.edit);
+
 // GET /skills/:id
 router.delete('/:id', skillsCtrl.delete);
+
+//PUT /skills/:id
+router.put('/:id', skillsCtrl.update);
 
 module.exports = router;
