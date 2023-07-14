@@ -8,7 +8,7 @@ var router = express.Router();
 
 var skillsCtrl = require('../controllers/skills');
 
-// All paths start with "/"
+// All routes default to "/movies"
 
 // GET "/"
 router.get('/', skillsCtrl.index);
